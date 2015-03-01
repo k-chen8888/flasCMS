@@ -8,7 +8,7 @@ index = Flask(__name__)
 index.config['MONGODB_SETTINGS'] = {'DB': 'index'}
 index.config['SECRET_KEY'] = 'root'
 
-db = MongoEngine(index)
+index_db = MongoEngine(index)
 
 # Use the blueprints
 def register_blueprints(index):
@@ -19,11 +19,6 @@ def register_blueprints(index):
 
 # Call the newly defined function to actually use the blueprints
 register_blueprints(index)
-
-# The actual index page that people see
-#@index.route('/')
-#def default_page():
-#	return 'Welcome to FlasCMS!'
 
 if __name__ == '__main__':
 	index.run()

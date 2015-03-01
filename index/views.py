@@ -11,3 +11,11 @@ class IndexView(MethodView):
 
 # Register urls
 index_bp.add_url_rule('/', view_func = IndexView.as_view('index_bp'))
+
+'''
+Imports for other components below
+'''
+# Admin
+from admin import *
+
+# Other Apps
