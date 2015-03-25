@@ -21,8 +21,10 @@ mgr_index.add_command('runserver', Server(
 	host = '0.0.0.0')
 )
 
-
-
+'''
+Start the manager
+Remeber to start with a command!
+'''
 if __name__ == '__main__':
 	# Change mgr_index to the name of the default manager 
 	mgr_index.run()

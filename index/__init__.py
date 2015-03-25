@@ -1,5 +1,6 @@
 from flask import Flask
 from flask.ext.mongoengine import MongoEngine
+from flask.ext.bcrypt import Bcrypt
 
 # Index page
 index = Flask(__name__)
@@ -9,6 +10,9 @@ index.config['MONGODB_SETTINGS'] = {'DB': 'index'}
 index.config['SECRET_KEY'] = 'root'
 
 index_db = MongoEngine(index)
+
+# Encryption
+index_bcrypt = Bcrypt(index)
 
 # Use the blueprints
 def register_blueprints(index):
